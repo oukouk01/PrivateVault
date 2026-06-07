@@ -17,7 +17,7 @@ class PrivateVaultApp : Application() {
 
     val applicationScope: CoroutineScope = CoroutineScope(SupervisorJob() + Dispatchers.IO)
 
-    val cryptoManager: CryptoManager by lazy { CryptoManager() }
+    val cryptoManager = CryptoManager
     val passwordRepository: PasswordRepository by lazy { PasswordRepository(this) }
     val vaultRepository: VaultRepository by lazy { VaultRepository(this) }
     val secureMediaStore: SecureMediaStore by lazy { SecureMediaStore(this) }
