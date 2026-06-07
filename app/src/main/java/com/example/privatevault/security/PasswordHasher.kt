@@ -19,7 +19,7 @@ class PasswordHasher {
         val digest = MessageDigest.getInstance("SHA-256")
         digest.update(salt)
         digest.update(password.toByteArray(Charsets.UTF_8))
-        val hash = digest.digest()
+        var hash = digest.digest()
         // 多次迭代,提升对暴力破解的成本
         repeat(10_000) {
             digest.reset()

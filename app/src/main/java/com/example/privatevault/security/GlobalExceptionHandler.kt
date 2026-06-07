@@ -13,8 +13,8 @@ object GlobalExceptionHandler {
     private const val TAG = "VaultCrash"
 
     fun install() {
-        val previous = Thread.getDefaultUnhandledExceptionHandler()
-        Thread.setDefaultUnhandledExceptionHandler { thread, throwable ->
+        val previous = Thread.getDefaultUncaughtExceptionHandler()
+        Thread.setDefaultUncaughtExceptionHandler { thread, throwable ->
             try {
                 // 不在 logcat 输出原始异常信息,只输出"已捕获"
                 Log.e(TAG, "Unhandled exception in thread ${thread.name}")

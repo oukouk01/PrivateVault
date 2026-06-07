@@ -57,6 +57,7 @@ import com.example.privatevault.data.VaultRepository
 import com.example.privatevault.security.CryptoManager
 import com.example.privatevault.ui.settings.SettingsScreen
 import java.io.File
+import android.net.Uri
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
