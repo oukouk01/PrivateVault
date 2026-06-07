@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<full-backup-content>
+    <!-- 不备份任何敏感数据 -->
+    <exclude domain="sharedpref" path="vault_prefs.xml" />
+    <exclude domain="file" path="private_media/" />
+</full-backup-content>

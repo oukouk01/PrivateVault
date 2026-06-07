@@ -1,0 +1,11 @@
+<resources>
+    <color name="white">#FFFFFFFF</color>
+    <color name="black">#FF000000</color>
+    <color name="calc_bg">#FFF4F6F8</color>
+    <color name="calc_screen">#FFEFF1F4</color>
+    <color name="calc_key_digit">#FFFFFFFF</color>
+    <color name="calc_key_op">#FFE9ECF1</color>
+    <color name="calc_key_action">#FFFFA000</color>
+    <color name="calc_text">#FF202124</color>
+    <color name="calc_text_action">#FFFFFFFF</color>
+</resources>

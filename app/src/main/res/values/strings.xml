@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">PrivateVault</string>
+    <string name="calc_label">计算器</string>
+    <string name="lock_title">私密空间</string>
+    <string name="hint_set_password">设置 6 位数字密码</string>
+    <string name="hint_confirm_password">再次输入以确认</string>
+    <string name="hint_enter_password">请输入密码</string>
+    <string name="action_unlock">解锁</string>
+    <string name="action_use_fingerprint">使用指纹解锁</string>
+    <string name="main_placeholder">私密空间</string>
+    <string name="tab_images">图片</string>
+    <string name="tab_videos">视频</string>
+    <string name="tab_settings">设置</string>
+    <string name="action_import">导入</string>
+    <string name="dialog_delete_confirm_title">彻底删除原文件</string>
+    <string name="dialog_delete_confirm_msg">原文件将从系统相册中彻底删除,仅保留在私密空间内,确认吗?</string>
+    <string name="permission_required">需要授予权限以访问相册</string>
+    <string name="locked_too_many_times">尝试次数过多,请 30 秒后再试</string>
+    <string name="backup_warning_title">备份提醒</string>
+    <string name="backup_warning_msg">应用卸载或清除数据会导致私密文件永久丢失,建议加密备份到电脑。</string>
+    <string name="action_export">加密导出到 Download</string>
+    <string name="disguise_title">伪装</string>
+    <string name="disguise_summary">关闭后,启动时直接显示密码锁界面</string>
+    <string name="export_success">已导出</string>
+    <string name="export_failed">导出失败</string>
+</resources>
