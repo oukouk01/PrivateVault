@@ -3,12 +3,10 @@ package com.example.privatevault.data
 import android.content.Context
 import java.io.File
 
-/**
- * 私有媒体存储:
- *   <filesDir>/private_media/images/*.enc
- *   <filesDir>/private_media/videos/*.enc
- *   写入时为每个子目录创建 .nomedia
- */
+// Private media storage:
+//   <filesDir>/private_media/images/*.enc
+//   <filesDir>/private_media/videos/*.enc
+//   Creates .nomedia in each subdirectory
 class VaultRepository(private val context: Context) {
 
     enum class MediaType(val subdir: String) {
@@ -30,11 +28,10 @@ class VaultRepository(private val context: Context) {
         ensureNoMedia(this)
     }
 
-    /** 在每个子目录放置 .nomedia,阻止系统扫描到加密文件。 */
+    // Create .nomedia in each subdirectory to prevent media scanner from indexing encrypted files
     fun ensureNoMedia() {
         ensureNoMedia(dirFor(MediaType.IMAGE))
         ensureNoMedia(dirFor(MediaType.VIDEO))
-        // 根目录也放一个,兜底
         ensureNoMedia(root)
     }
 
@@ -53,7 +50,7 @@ class VaultRepository(private val context: Context) {
             ?: emptyList()
     }
 
-    /** 拷贝并加密,返回目标文件。失败时清理半成品。 */
+    // Create a new encrypted file path in the appropriate directory
     fun newEncryptedFile(type: MediaType, suffix: String = ".enc"): File {
         val dir = dirFor(type)
         val name = "${System.currentTimeMillis()}_${(0..0xffff).random().toString(16)}$suffix"

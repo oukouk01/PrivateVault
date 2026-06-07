@@ -10,7 +10,7 @@ import javax.crypto.spec.IvParameterSpec
 
 /**
  * AES-256-CTR 加解密。
- * 文件格式: `[12 字节 IV][密文...]`
+ * 文件格式: 12 字节 IV 后接密文
  * 出于"不落盘"安全考虑,所有操作都在流式内存/磁盘流中完成。
  */
 object AesCtr {
